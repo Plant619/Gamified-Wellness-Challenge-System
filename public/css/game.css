@@ -1,0 +1,101 @@
+.format-icon {
+    height: 50px;
+}
+
+.format-points-icon {
+    height: 40px;
+}
+
+
+.cooking-bg {
+    min-height: 100vh;
+    background-image: url("../images/cooking_bg_new.png");
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    position: relative;
+}
+
+/* admin */
+
+#adminTitle {
+    background-color: rgb(225, 197, 255);
+    border-color: rgb(225, 107, 255) !important;
+}
+
+#admin-bg {
+    min-height: 100vh;
+    background-image: url('../images/admin_background.png');
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    position: relative;
+}
+
+
+#banUserBG {
+    background-color: rgb(248, 153, 11);
+}
+
+#banUserBtn {
+    color: white;
+}
+
+#banUserBG :hover {
+    background-color: rgb(233, 148, 20);
+}
+
+#newRecipeIngredientBtn {
+    color: white;
+}
+
+#newRecipeIngredientBG {
+    background-color: rgb(225, 136, 225);
+}
+
+#newRecipeIngredientBG :hover {
+    background-color: rgb(196, 118, 196);
+}
+
+#ingredientList {
+    list-style: none;
+}
+
+.ingredientQuantity {
+    width: 80px;
+    text-align: center;
+}
+
+.ingredientItem {
+    display: grid;
+    /* Makes input field inline */
+    grid-template-columns: 40px 1fr 80px;
+    align-items: center;
+    padding: 6px 0;
+}
+
+#feed-bg {
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    position: relative;
+}
+
+.format-dish-image {
+    width: 350px;
+}
+
+#dishOverlay {
+    position: absolute;
+    top: 35%;
+    left: 85%;
+    transform: translateX(-50%);
+    z-index: 1050;
+}
+
+#hideOverlayBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

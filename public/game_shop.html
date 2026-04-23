@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Specific css file -->
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- Main js file -->
+    <script src="../js/script.js" defer></script>
+    <script src="./js/queryCmd.js"></script>
+    <script src="./js/game.js" defer></script>
+    <script src="./js/shop.js" defer></script>
+
+    <title>BED CA2 Shop</title>
+
+    <!-- Website icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/website-game-icon.png">
+    
+</head>
+<body>
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#"><img id="MDB-logo"
+                src="../images/game_icon.png" alt="Game logo"
+                draggable="false" height="50" />
+            </a>
+            <h3>Cook Out</h3>
+
+            <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item me-3" id="adminTab">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_admin.html">
+                            <img src="./images/admin_icon.png" alt="Admin" class="format-icon">
+                            Admin
+                        </a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_quest.html">
+                            <img src="../images/quest_icon.png" alt="Quest" class="format-icon">
+                            Quest
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_cooking.html">
+                            <img src="../images/cooking_icon.png" alt="Cooking" class="format-icon">
+                            Cooking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_feed.html">
+                            <img src="./images/snorlax_icon.png" alt="Feed" class="format-icon">
+                            Feed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link d-flex flex-column align-items-center active bg-info" href="game_shop.html">
+                        <img src="../images/shop_icon.png" alt="Shop" class="format-icon">
+                        Shop
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_inventory.html">
+                            <img src="../images/inventory_icon.png" alt="Inventory" class="format-icon">
+                            Inventory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_profile.html">
+                            <img src="../images/profile_icon.png" alt="Profile" class="format-icon">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="shop-bg d-flex align-items-end justify-content-center">
+
+        <!-- Shows user points -->
+        <div id="pointsField" class="position-absolute top-0 end-0 m-3 p-2">
+            <img src="./images/points_icon.png" alt="Points" class="me-1 format-points-icon">
+            <span id="currentPoints" class="h3">0</span>
+        </div>
+
+        <!-- Should open buy menu-->
+        <a class="btn btn-info text-light px-5 py-4 m-3 fs-1 fw-bold" href="#" id="buyBtn">
+            Buy Goods
+        </a>
+
+
+        <!-- Shop Modal -->
+        <div class="modal" tabindex="-1" id="shopModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Gorb's Shop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        
+                        <!-- Shops tabs -->        
+                        <ul class="nav nav-tabs" id="shopTab">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients" type="button">Ingredients</button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" id="recipes-tab" data-bs-toggle="tab" data-bs-target="#recipes" type="button">Recipes</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab content -->
+                        <div class="tab-content mt-3">
+
+                            <!-- Ingredient tab -->
+                            <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+                                <div class="container" id="ingredientGrid">
+                                    <!-- Content added in JS -->
+                                </div>
+                            </div>
+
+                            <!-- Recipes tab -->
+                            <div class="tab-pane fade" id="recipes" role="tabpanel">
+                                <div class="container" id="recipeGrid">
+                                    <!-- Content added in JS -->
+                                </div>
+
+                                <h4 id="recipeMessage"></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Toasts -->
+        <div class="position-fixed bottom-0 end-0">
+        <!-- Toast that the shows when ingredient is successfully bought or something occurs -->
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="shop-toast" style="z-index: 1060;">
+                <div class="toast-header" id="toast-header">
+                    <strong class="me-auto" id="toast-title"></strong>
+                    <!-- <small class="text-muted">Nice job!</small> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body" id="toast-text">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

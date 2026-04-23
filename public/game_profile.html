@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Specific css file -->
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Main js file -->
+    <script src="./js/script.js"></script>
+    <!-- Specific js file -->
+    <script src="./js/profile.js" defer></script>
+    <script src="./js/queryCmd.js"></script>
+
+    <title>BED CA2 Profile</title>
+
+    <!-- Website icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/website-game-icon.png">
+</head>
+<body class="bg-light">
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#"><img id="MDB-logo"
+                src="../images/game_icon.png" alt="Game logo"
+                draggable="false" height="50" />
+            </a>
+            <h3>Cook Out</h3>
+
+            <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item me-3" id="adminTab">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_admin.html">
+                            <img src="./images/admin_icon.png" alt="Admin" class="format-icon">
+                            Admin
+                        </a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_quest.html">
+                            <img src="../images/quest_icon.png" alt="Quest" class="format-icon">
+                            Quest
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_cooking.html">
+                            <img src="../images/cooking_icon.png" alt="Cooking" class="format-icon">
+                            Cooking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_feed.html">
+                            <img src="./images/snorlax_icon.png" alt="Feed" class="format-icon">
+                            Feed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link d-flex flex-column align-items-center" href="game_shop.html">
+                        <img src="../images/shop_icon.png" alt="Shop" class="format-icon">
+                        Shop
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_inventory.html">
+                            <img src="../images/inventory_icon.png" alt="Inventory" class="format-icon">
+                            Inventory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center active bg-info" href="game_profile.html">
+                            <img src="../images/profile_icon.png" alt="Profile" class="format-icon">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="m-5 card shadow" id="bg-profile">
+        <div class="d-flex justify-content-center">
+            <img src="./images/profile_image.png" alt="Profile icon" class="m-3" id="profile-img">
+        </div>
+        <!-- Change to corresponding username -->
+        <h3 class="text-center" id="usernameField">Username</h3>
+
+        <hr>
+
+        <div class="my-3">
+            <!-- Show number of dishes users cooked -->
+            <div class="row text-center">
+                <div class="col">
+                    <!-- Source: <a href="https://www.flaticon.com/free-icons/lunch" title="lunch icons">Lunch icons created by Freepik - Flaticon</a> -->
+                    <img src="../images/snorlax_icon.png" alt="Snorlax" class="w-50 p-2">
+                    <h5 id="snorlaxFriendshipField" class="mt-4">number here</h5>
+                    <p>Snorlax Friendship Points</p>
+                </div>
+
+                <!-- Show current number of points -->
+                <div class="col text-center">
+                    <!-- Source: <a href="https://www.flaticon.com/free-icons/coin" title="coin icons">Coin icons created by Heykiyou - Flaticon</a> -->
+                    <img src="../images/points_icon.png" alt="Points" class="w-50 p-2">
+                    <h5 id="pointsField">number here</h5>
+                    <p>Points</p>
+                </div>
+
+                <!-- Show number of challenges user has completed (GET user completion) -->
+                <div class="col text-center">
+                    <!-- Source: <a href="https://www.flaticon.com/free-icons/survey" title="survey icons">Survey icons created by Pixelmeetup - Flaticon</a> -->
+                    <img src="../images/challenge_completed_icon.png" alt="completed challenge" class="w-50 p-2">
+                    <h5 id="challengeCompletedField">number here</h5>
+                    <p>Challenges completed</p>
+                </div>
+
+                <!-- Show challenges made by user (GET user challenges) -->
+                <div class="col text-center">
+                    <!-- Source: <a href="https://www.flaticon.com/free-icons/create" title="create icons">Create icons created by Muhammad_Usman - Flaticon</a> -->
+                    <img src="../images/challenge_created_icon.png" alt="created challenge" class="w-50 p-2">
+                    <h5 id="challengeCreatedField">number here</h5>
+                    <p>Challenges created</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add a check like are you sure you want to log out before logging out -->
+        <button type="button" class="btn rounded rounded-5 bg-info" id="log-out">Log out</button>
+
+        <!-- Opens when log out button is clicked -->
+        <div id="log-out-modal" class="modal m-3">
+            <div class="modal-content px-3 py-5">
+                <button class="btn-close" id="log-out-close"></button>
+
+                <p class="p-3 text-center text-white fs-4">
+                    Are you sure you would like to log out?
+                </p>
+
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-lg btn-success me-2" type="button" id="logout-true">Yes</button>
+                    <button class="btn btn-lg btn-danger" type="button" id="logout-false">No</button>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

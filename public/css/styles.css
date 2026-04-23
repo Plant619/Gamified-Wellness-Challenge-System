@@ -1,0 +1,54 @@
+
+/* Register button */
+.register {
+    background-color: black;
+    color: white;
+    /* Removes line underneath link */
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Changes color of register button when hovered */
+.register:hover {
+    background-color: rgb(239, 239, 239);
+    color: black;
+}
+
+/* List styles */
+.explanation-list {
+    list-style-type: none;
+}
+
+.format-card-image {
+    width: 200px;
+    height: 200px; 
+    background-color: black;
+}
+
+
+/* Footer */
+footer {
+    background-color: #db6930;
+    /* Makes footer stay at bottom of screen */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    background-color: rgb(239, 239, 239);
+}
+
+
+.success-message {
+    background-color: rgba(77, 186, 77, 0.514);
+}
+
+.error-message {
+    background-color: #c31c2a69;
+}

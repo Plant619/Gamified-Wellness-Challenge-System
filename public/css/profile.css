@@ -1,0 +1,22 @@
+.modal {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: rgba(76, 100, 100, 0.682) !important;
+    width: 200px;
+    max-width: 50%;
+    text-align: center;
+}
+
+
+#profile-img {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+#bg-profile {
+    background-color: rgb(232, 232, 232);
+}

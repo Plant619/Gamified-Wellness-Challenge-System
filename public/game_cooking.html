@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Specific css file -->
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="./css/cooking.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- Main js file -->
+    <script src="./js/script.js" defer></script>
+    <script src="./js/cooking.js" defer></script>
+    <script src="./js/queryCmd.js"></script>
+    <script src="./js/game.js" defer></script>
+    
+    <title>BED CA2 Cooking</title>
+
+        <!-- Website icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/website-game-icon.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#"><img id="MDB-logo"
+                src="../images/game_icon.png" alt="Game logo"
+                draggable="false" height="50" />
+            </a>
+            <h3>Cook Out</h3>
+
+            <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item me-3" id="adminTab">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_admin.html">
+                            <img src="./images/admin_icon.png" alt="Admin" class="format-icon">
+                            Admin
+                        </a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_quest.html">
+                            <img src="../images/quest_icon.png" alt="Quest" class="format-icon">
+                            Quest
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center active bg-info" href="game_cooking.html">
+                            <img src="../images/cooking_icon.png" alt="Cooking" class="format-icon">
+                            Cooking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_feed.html">
+                            <img src="./images/snorlax_icon.png" alt="Feed" class="format-icon">
+                            Feed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link d-flex flex-column align-items-center" href="game_shop.html">
+                        <img src="../images/shop_icon.png" alt="Shop" class="format-icon">
+                        Shop
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_inventory.html">
+                            <img src="../images/inventory_icon.png" alt="Inventory" class="format-icon">
+                            Inventory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="game_profile.html">
+                            <img src="./images/profile_icon.png" alt="Profile" class="format-icon">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="cooking-bg d-flex align-items-end justify-content-center">
+
+        <!-- Shows user points -->
+        <div id="pointsField" class="position-absolute top-0 end-0 m-3 p-2">
+            <img src="./images/points_icon.png" alt="Points" class="me-1 format-points-icon">
+            <span id="currentPoints" class="h3">0</span>
+        </div>
+
+        <!-- Should open buy menu-->
+        <a class="btn btn-info text-light px-5 py-4 m-3 fs-1 fw-bold" href="#" id="cookBtn" data-bs-toggle="offcanvas" data-bs-target="#cookOffcanvas">
+            Cook
+        </a>
+
+
+        <!-- Offcanvas that shows recipes -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="cookOffcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header bg-info">
+                <h3 class="offcanvas-title" id="cookOffcanvasTitle">Choose a recipe to cook</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- Should contain recipes they own which ingredients the user has and what they still need -->
+            <!-- Like numOwned/numNeeded -->
+            <!-- Green background sufficient, red insufficient -->
+            <div class="offcanvas-body" id="cookOffcanvasBody">
+                <!-- Content added in JS -->
+            </div>
+        </div>
+
+
+        <!-- Overlay that shows the successfully cooked recipe -->
+        <div id="dishOverlay">
+        </div>
+
+
+        <!-- Modal that shows errors and successes -->
+        <div id="cookModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header" id="modalHeader">
+                        <h4 class="modal-title" id="cookModalTitle"></h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="cookModalBody">
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div class="position-fixed bottom-0 end-0">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="errorToast" style="z-index: 1055;">
+                <div class="toast-header danger-toast">
+                    <strong class="me-auto">You do not own any recipes</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body" id="error-text">Go to shop to buy some recipes before trying to cook. </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

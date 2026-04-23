@@ -1,0 +1,86 @@
+
+body {
+    background-color: #A0E4F1 !important;
+}
+
+#topTab {
+    background-color: #D3A6ED;
+}
+
+/* Inventory */
+
+.format-ingredient-icon {
+    height: 100px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.format-word {
+    font-size: 1.5rem;
+}
+
+/* Table */
+ 
+table {
+    background-color: black;
+} 
+
+
+
+/* Changes text color based on rarity */
+#ingredientTable .Common {
+    color: rgb(154, 156, 159);
+    font-weight: 600;
+}
+
+#ingredientTable .Uncommon {
+    color: #00c016;
+    font-weight: 600;
+}
+
+#ingredientTable .Rare {
+    color: #26a4ce;
+    font-weight: 600;
+}
+
+#ingredientTable .Epic {
+    color: rgb(183, 101, 255);
+    font-weight: 600;
+}
+
+#ingredientTable .Legendary {
+    color: rgb(229, 202, 51);
+    font-weight: 600;
+}
+
+#ingredientTable .Commonimage {
+    background-color: rgb(242, 242, 242);
+}
+
+#ingredientTable .Uncommonimage {
+    background-color: rgb(183, 255, 191);
+}
+
+#ingredientTable .Rareimage {
+    background-color: #c3f0ff;
+}
+
+#ingredientTable .Epicimage {
+    background-color: rgb(222, 185, 255);
+}
+
+#ingredientTable .Legendaryimage {
+    background-color: rgb(255, 255, 183);
+}
+
+
+/* formatting recipe table */
+.format-recipe-icon {
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.format-recipe-ingredient {
+    height: 3rem;
+}

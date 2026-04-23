@@ -1,0 +1,24 @@
+.format-ingredient-icon {
+    height: 100px;
+}
+
+.format-points {
+    height: 1.5rem;
+}
+
+.modal-header {
+    background-color: rgb(112, 197, 228);
+}
+
+.format-recipe-ingredient {
+    height: 3rem;
+}
+
+.shop-bg {
+    min-height: 100vh;
+    background-image: url("../images/shop_bg.png");
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    position: relative;
+}
