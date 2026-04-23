@@ -33,31 +33,32 @@ In your terminal, type:
     npm i bcrypt, nodemon, dotenv, express, jsonwebtoken, mysql2, node-fetch
     ```
 
-4. Setup the database
+3. Setup the database
    
-In MySQL Workbench, create a new schema
+    In MySQL Workbench, create a new schema
 
-6. Make your .env file
+4. Make your .env file
    
-It should look something like this: 
+    It should look something like this: 
 
-```
-DB_HOST=<your_database_host>
-DB_USER=<your_database_user>
-DB_PASSWORD=<your_database_password>
-DB_DATABASE=<your_database_name>
-JWT_SECRET_KEY=<your_secret_key>
-JWT_EXPIRES_IN=<duration>
-JWT_ALGORITHM=<selected_algorithm>
-```
+    ```
+    DB_HOST=<your_database_host>
+    DB_USER=<your_database_user>
+    DB_PASSWORD=<your_database_password>
+    DB_DATABASE=<your_database_name>
+    JWT_SECRET_KEY=<your_secret_key>
+    JWT_EXPIRES_IN=<duration>
+    JWT_ALGORITHM=<selected_algorithm>
+    ```
 
-Replace `<your_database_host>`, `<your_database_user>`, `<your_database_password>`, and `<your_database_name>` with the appropriate values for your database connection.
+   Replace `<your_database_host>`, `<your_database_user>`, `<your_database_password>`, and `<your_database_name>` with the
+   appropriate values for your database connection.
 
-Replace `<your_secret_key>`, `<duration>`, and `<selected_algorithm>` with the appropriate values for your JSON web token usage.
+    Replace `<your_secret_key>`, `<duration>`, and `<selected_algorithm>` with the appropriate values for your JSON web token usage.
 
 5. Create the database
    
-In your terminal, type:
+    In your terminal, type:
 
     ```
     npm run init_tables
@@ -65,7 +66,7 @@ In your terminal, type:
 
 7. Start the server
    
-In your terminal, type:
+    In your terminal, type:
 
     ``` 
     npm run dev 
@@ -75,11 +76,11 @@ In your terminal, type:
 
 9. Open frontend
     
-Open a new tab in your browser and type localhost:3000/index.html in the url 
+    Open a new tab in your browser and type localhost:3000/index.html in the url 
 
 11. Register and login to start playing
     
-Click the sign in tab and register an account and then login to play
+    Click the sign in tab and register an account and then login to play
 
 ## Folder Structure
 
