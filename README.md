@@ -4,7 +4,9 @@
 This includes both the updated backend and the frontend of the application. Using fetch API for the frontend to communicate with the backend. After login in, users are able to complete wellness challenges and create wellness challenges. Completing challenges earns them ingredients and points which allow them to buy ingredients and recipes in the shop. Users can check the ingredients, recipes and dishes that they own in their inventory. Using the recipes and ingredients, users can cook dishes in the cook tab. Dishes cooked can then be fed to Snorlax which earns them friendship points. Users can also check their stats in the profile page. 
 
 Admins have access to the admin tab which allows them to view all users and their information, ban users which deletes all information related to the user such as ingredients, points, challenges created, etc. Admins can also create new ingredients and new recipes with their corresponding recipe ingredients. Admins can also add new recipe ingredients to already existing recipes. 
+
 Default admin account: 
+
     Username: Admin
     Password: 1234
 
@@ -24,16 +26,19 @@ Default admin account:
 1. Clone the repository
 
 2. Install the required dependencies
+   
 In your terminal, type:
 
     ```
     npm i bcrypt, nodemon, dotenv, express, jsonwebtoken, mysql2, node-fetch
     ```
 
-3. Setup the database
+4. Setup the database
+   
 In MySQL Workbench, create a new schema
 
-4. Make your .env file
+6. Make your .env file
+   
 It should look something like this: 
 
 ```
@@ -51,25 +56,29 @@ Replace `<your_database_host>`, `<your_database_user>`, `<your_database_password
 Replace `<your_secret_key>`, `<duration>`, and `<selected_algorithm>` with the appropriate values for your JSON web token usage.
 
 5. Create the database
+   
 In your terminal, type:
 
     ```
     npm run init_tables
     ```
 
-6. Start the server
+7. Start the server
+   
 In your terminal, type:
 
     ``` 
     npm run dev 
     ```
 
-    (make sure to only run the server in one terminal)
+    (Make sure to only run the server in one terminal)
 
-7. Open frontend
+9. Open frontend
+    
 Open a new tab in your browser and type localhost:3000/index.html in the url 
 
-8. Register and login to start playing
+11. Register and login to start playing
+    
 Click the sign in tab and register an account and then login to play
 
 ## Folder Structure
