@@ -8,6 +8,9 @@ Default admin account:
     Username: Admin
     Password: 1234
 
+## Demo & Documentation
+- [ERD Diagram & Demo Video Links]([url](https://docs.google.com/document/d/1K2ntc02Nz-1mYpnKgJ1wJc-nKFzNB9N_CT1mggUCMiE/edit?usp=sharing))
+    
 ## Features
 1. User registration and login
 2. Complete and create wellness challenges
