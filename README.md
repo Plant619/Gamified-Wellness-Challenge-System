@@ -1,4 +1,4 @@
-# CA2 BED: Wellness Challenge Web Application
+# Wellness Challenge Web Application
 
 ## Project Overview
 This includes both the updated backend and the frontend of the application. Using fetch API for the frontend to communicate with the backend. After login in, users are able to complete wellness challenges and create wellness challenges. Completing challenges earns them ingredients and points which allow them to buy ingredients and recipes in the shop. Users can check the ingredients, recipes and dishes that they own in their inventory. Using the recipes and ingredients, users can cook dishes in the cook tab. Dishes cooked can then be fed to Snorlax which earns them friendship points. Users can also check their stats in the profile page. 
