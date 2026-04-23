@@ -27,7 +27,7 @@ Default admin account:
 
 2. Install the required dependencies
    
-In your terminal, type:
+    In your terminal, type:
 
     ```
     npm i bcrypt, nodemon, dotenv, express, jsonwebtoken, mysql2, node-fetch
